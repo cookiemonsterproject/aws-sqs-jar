@@ -5,6 +5,8 @@ import (
 	"github.com/cookiejars/cookiejar"
 )
 
+const receiptHandle = "receipt_handle"
+
 type cookie struct {
 	*sqs.Message
 }
@@ -18,7 +20,7 @@ func newCookies(messages []*sqs.Message) []cookiejar.Cookie {
 }
 
 func newCookie(message *sqs.Message) cookiejar.Cookie {
-	return &cookie{message}
+	return &cookie{Message: message}
 }
 
 func (c cookie) ID() string {
@@ -27,4 +29,10 @@ func (c cookie) ID() string {
 
 func (c cookie) Content() interface{} {
 	return *c.Body
+}
+
+func (c cookie) Metadata() map[string]string {
+	return map[string]string{
+		receiptHandle: *c.ReceiptHandle,
+	}
 }
