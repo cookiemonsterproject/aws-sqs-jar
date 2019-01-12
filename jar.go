@@ -20,7 +20,7 @@ type jar struct {
 	cfg Config
 }
 
-func New(session *session.Session, config Config) (cookiejar.Jar, error) {
+func NewWithSession(session *session.Session, config Config) (cookiejar.Jar, error) {
 	return &jar{
 		SQSAPI: sqs.New(session),
 		cfg:    config,
