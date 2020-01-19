@@ -7,7 +7,8 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sqs"
 	"github.com/aws/aws-sdk-go/service/sqs/sqsiface"
-	"github.com/cookiejars/cookiejar"
+
+	"github.com/cookiejars/cookie-monster"
 )
 
 type Config struct {
@@ -20,14 +21,14 @@ type jar struct {
 	cfg Config
 }
 
-func NewWithSession(session *session.Session, config Config) (cookiejar.Jar, error) {
+func NewWithSession(session *session.Session, config Config) (cookiemonster.Jar, error) {
 	return &jar{
 		SQSAPI: sqs.New(session),
 		cfg:    config,
 	}, nil
 }
 
-func (j jar) Retrieve() ([]cookiejar.Cookie, error) {
+func (j jar) Retrieve() ([]cookiemonster.Cookie, error) {
 	queueURL, err := j.getQueueURL()
 	if err != nil {
 		return nil, err
@@ -46,7 +47,7 @@ func (j jar) Retrieve() ([]cookiejar.Cookie, error) {
 	return newCookies(result.Messages), nil
 }
 
-func (j jar) Retire(cookie cookiejar.Cookie) error {
+func (j jar) Retire(cookie cookiemonster.Cookie) error {
 	queueURL, err := j.getQueueURL()
 	if err != nil {
 		return err

@@ -2,7 +2,8 @@ package awssqsjar
 
 import (
 	"github.com/aws/aws-sdk-go/service/sqs"
-	"github.com/cookiejars/cookiejar"
+
+	"github.com/cookiejars/cookie-monster"
 )
 
 const receiptHandle = "receipt_handle"
@@ -11,15 +12,15 @@ type cookie struct {
 	*sqs.Message
 }
 
-func newCookies(messages []*sqs.Message) []cookiejar.Cookie {
-	ret := make([]cookiejar.Cookie, len(messages))
+func newCookies(messages []*sqs.Message) []cookiemonster.Cookie {
+	ret := make([]cookiemonster.Cookie, len(messages))
 	for i, m := range messages {
 		ret[i] = newCookie(m)
 	}
 	return ret
 }
 
-func newCookie(message *sqs.Message) cookiejar.Cookie {
+func newCookie(message *sqs.Message) cookiemonster.Cookie {
 	return &cookie{Message: message}
 }
 

@@ -1,7 +1,9 @@
 github.com/aws/aws-sdk-go v1.16.17 h1:hHRKZhoB4qEY17aGNp71UxQFyYpx6WZXGMUzx9y/A4w=
 github.com/aws/aws-sdk-go v1.16.17/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
-github.com/cookiejars/cookiejar v0.0.0-20190110222644-fa0f5161b40a h1:N+ja6YBvQxrC8xeipfI73ByqVFMwa71qJBWT8gEK4ic=
-github.com/cookiejars/cookiejar v0.0.0-20190110222644-fa0f5161b40a/go.mod h1:MnfU6aPsfP5xTXrjs0+5xHaNHNPrOcr7O5akC9bk0K8=
+github.com/aws/aws-sdk-go v1.28.5 h1:yYeWPM8w5FoIj3Lo0BDZxRyDpTveKTq/qvnIEPBnev8=
+github.com/aws/aws-sdk-go v1.28.5/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
+github.com/cookiejars/cookie-monster v0.0.0-20200119164714-75b5e3a68206 h1:UpxQKZmV/OaHj4ugkVqPAAdx9exoE+wvluLBCxUlgpU=
+github.com/cookiejars/cookie-monster v0.0.0-20200119164714-75b5e3a68206/go.mod h1:yiQsvE5pMXB7hqwGSXg7IuQEGPCtb7Bln5mU1A1vRUY=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
