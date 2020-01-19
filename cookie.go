@@ -3,7 +3,7 @@ package awssqsjar
 import (
 	"github.com/aws/aws-sdk-go/service/sqs"
 
-	"github.com/cookiejars/cookie-monster"
+	"github.com/cookiemonsterproject/cookie-monster"
 )
 
 const receiptHandle = "receipt_handle"

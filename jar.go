@@ -8,7 +8,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/sqs"
 	"github.com/aws/aws-sdk-go/service/sqs/sqsiface"
 
-	"github.com/cookiejars/cookie-monster"
+	"github.com/cookiemonsterproject/cookie-monster"
 )
 
 type Config struct {
